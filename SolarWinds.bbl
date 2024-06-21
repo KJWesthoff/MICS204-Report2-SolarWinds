@@ -1,0 +1,163 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{CNN_FireEye}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.cnn.com/videos/business/2021/02/24/fireeye-ceo-solarwinds-hack.cnnbusiness}}
+      \field{note}{Accessed: 2024-06-13}
+      \field{title}{{FireEye CEO on how the SolarWinds hack was discovered} CNN video}
+    \endentry
+    \entry{SolarWindsOrion}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://web.archive.org/web/20201214092129/https://www.solarwinds.com/orion-platform}}
+      \field{note}{Accessed: 2024-06-13}
+      \field{title}{{Orion Platform} (Web archive)}
+    \endentry
+    \entry{Mandiant}{misc}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://cloud.google.com/blog/topics/threat-intelligence/evasive-attacker-leverages-solarwinds-supply-chain-compromises-with-sunburst-backdoor/}}
+      \field{note}{Accessed: 2024-06-13}
+      \field{title}{{Highly Evasive Attacker Leverages SolarWinds Supply Chain to Compromise Multiple Global Victims With SUNBURST Backdoor} google}
+    \endentry
+    \entry{SolarWindsCISO}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=00432bf95dae33daba00dbbe9730bdfa}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{00432bf95dae33daba00dbbe9730bdfa}
+      \strng{fullhash}{00432bf95dae33daba00dbbe9730bdfa}
+      \strng{bibnamehash}{00432bf95dae33daba00dbbe9730bdfa}
+      \strng{authorbibnamehash}{00432bf95dae33daba00dbbe9730bdfa}
+      \strng{authornamehash}{00432bf95dae33daba00dbbe9730bdfa}
+      \strng{authorfullhash}{00432bf95dae33daba00dbbe9730bdfa}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://youtu.be/6gQ5oAWHMoU?si=mBBETA6P8e44MPs_}}
+      \field{note}{Accessed: 2024-06-13}
+      \field{title}{{Youtube} (SUNBURST From The Inside Tim Brown, CISO of SolarWinds)}
+    \endentry
+    \entry{TechTargetSolarwinds}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9dae36f7995de4386ba4c4226b9239d8}{%
+           family={Saheed\bibnamedelima Oladimeji},
+           familyi={S\bibinitperiod\bibinitdelim O\bibinitperiod},
+           given={Sean\bibnamedelimb Michael\bibnamedelima Kerner},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{9dae36f7995de4386ba4c4226b9239d8}
+      \strng{fullhash}{9dae36f7995de4386ba4c4226b9239d8}
+      \strng{bibnamehash}{9dae36f7995de4386ba4c4226b9239d8}
+      \strng{authorbibnamehash}{9dae36f7995de4386ba4c4226b9239d8}
+      \strng{authornamehash}{9dae36f7995de4386ba4c4226b9239d8}
+      \strng{authorfullhash}{9dae36f7995de4386ba4c4226b9239d8}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.techtarget.com/whatis/feature/SolarWinds-hack-explained-Everything-you-need-to-know}}
+      \field{note}{Accessed: 2024-06-13}
+      \field{title}{{TechTarget} (SolarWinds hack explained: Everything you need to know)}
+    \endentry
+    \entry{MicrosoftSolarwinds}{misc}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.microsoft.com/en-us/security/blog/2021/01/20/deep-dive-into-the-solorigate-second-stage-activation-from-sunburst-to-teardrop-and-raindrop}}
+      \field{note}{Accessed: 2024-06-13}
+      \field{title}{{Microsoft Secutiry} (MS Security Page)}
+    \endentry
+    \entry{orangematterSunburst}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b577d26bc001d675fded75f04078f604}{%
+           family={Ramakrishna},
+           familyi={R\bibinitperiod},
+           given={Sudhakar},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b577d26bc001d675fded75f04078f604}
+      \strng{fullhash}{b577d26bc001d675fded75f04078f604}
+      \strng{bibnamehash}{b577d26bc001d675fded75f04078f604}
+      \strng{authorbibnamehash}{b577d26bc001d675fded75f04078f604}
+      \strng{authornamehash}{b577d26bc001d675fded75f04078f604}
+      \strng{authorfullhash}{b577d26bc001d675fded75f04078f604}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://orangematter.solarwinds.com/2021/01/11/new-findings-from-our-investigation-of-sunburst/}}
+      \field{note}{Accessed: 2024-06-13}
+      \field{title}{{SolarWinds} (New Findings From Our Investigation of SUNBURST)}
+    \endentry
+    \entry{CISA_sunburst}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c4cf1337de12d64001452cba233ff8bd}{%
+           family={CISA},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{c4cf1337de12d64001452cba233ff8bd}
+      \strng{fullhash}{c4cf1337de12d64001452cba233ff8bd}
+      \strng{bibnamehash}{c4cf1337de12d64001452cba233ff8bd}
+      \strng{authorbibnamehash}{c4cf1337de12d64001452cba233ff8bd}
+      \strng{authornamehash}{c4cf1337de12d64001452cba233ff8bd}
+      \strng{authorfullhash}{c4cf1337de12d64001452cba233ff8bd}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.cisa.gov/news-events/analysis-reports/ar21-039a}}
+      \field{note}{Accessed: 2024-06-21}
+      \field{title}{{CISA} (MAR-10318845-1.v1 - SUNBURST)}
+    \endentry
+    \entry{cybercdh}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d49d34433da073922ca751517e04ac5e}{%
+           family={cybercdh},
+           familyi={c\bibinitperiod}}}%
+      }
+      \strng{namehash}{d49d34433da073922ca751517e04ac5e}
+      \strng{fullhash}{d49d34433da073922ca751517e04ac5e}
+      \strng{bibnamehash}{d49d34433da073922ca751517e04ac5e}
+      \strng{authorbibnamehash}{d49d34433da073922ca751517e04ac5e}
+      \strng{authornamehash}{d49d34433da073922ca751517e04ac5e}
+      \strng{authorfullhash}{d49d34433da073922ca751517e04ac5e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://youtu.be/JoMwrkijTZ8?feature=shared}}
+      \field{note}{Accessed: 2024-06-21}
+      \field{title}{{Youtube} (SUNBURST SolarWinds Malware - Tools, Tactics and Methods to get you started with Reverse Engineering)}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,157 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Journal Article
+% LaTeX Template
+% Version 2.0 (February 7, 2023)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+% NOTE: The bibliography needs to be compiled using the biber engine.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	letterpaper, % Paper size, use either a4paper or letterpaper
+	10pt, % Default font size, can also use 11pt or 12pt, although this is not recommended
+	unnumberedsections, % Comment to enable section numbering
+	twoside, % Two side traditional mode where headers and footers change between odd and even pages, comment this option to make them fixed
+]{LTJournalArticle}
+
+\addbibresource{bibliography.bib} % BibLaTeX bibliography file
+
+\runninghead{CVE-2017-0144 EternalBlue} % A shortened article title to appear in the running head, leave this command empty for no running head
+
+\footertext{\textit{Report1 } (MICS CYBER 204, Summer-2024)} % Text to appear in the footer, leave this command empty for no footer text
+
+\setcounter{page}{1} % The page number of the first page, set this to a higher number if the article is to be part of an issue or larger work
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\usepackage[title,toc,titletoc]{appendix}
+\usepackage{titlesec}
+\usepackage{lscape}
+
+\title{SolarWinds \\ MICS-204 Report 2, Summer 2024} % Article title, use manual lines breaks (\\) to beautify the layout
+
+% Authors are listed in a comma-separated list with superscript numbers indicating affiliations
+% \thanks{} is used for any text that should be placed in a footnote on the first page, such as the corresponding author's email, journal acceptance dates, a copyright/license notice, keywords, etc
+\author{
+	Karl-Johan Westhoff \\
+	email \href{mailto:kjwesthoff@berkeley.edu}{kjwesthoff@berkeley.edu}
+}
+
+% Affiliations are output in the \date{} command
+\date{UC Berkleley School of Information \\
+MICS Course 204 Summer 2024
+}
+
+% % Full-width abstract
+% \renewcommand{\maketitlehookd}{%
+% 	\begin{abstract}
+% 		\noindent Lorem ipsum dolor sit amet,rta porttitor.
+% 	\end{abstract}
+% }
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Output the title section
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section{Summary Of The Breach}
+December 13, 2020 a vigilant security analyst at the security company FireEye (later Mandiant) reacted to an unauthorized phone registering on their network \cite{CNN_FireEye}. It was during the covid pandemic so a lot of employees were adding new 'work from home' equipment, but the analyst decided to investigate and determined that the company had been breached, someone unauthorized was logging in. After a thorough search through systems, the breach was isolated to origin in the company's 'SolarWinds Orion' network monitoring system. The SolarWinds Orion product was(is) a tool for monitoring corporate networks and endpoints \cite{SolarWindsOrion}, meaning it had high system privileges on windows networks. \par
+It turned out that the SolarWinds company had been hacked, and a trojan had been implanted with the Orion software. The trojan had been transplanted into SolarWinds software build pipeline (it was not present in codebase), and pushed to their customers with digitally signed updates. \par
+Sunburst is a sophisticated malware deeply integrated with its SolarWinds host, it has a small footprint\footnote{3500 lines of code} and hides in plain sight. Command and control functions communicate via the same ports and protocols as Orion thereby evading detection, another feature of the malware is that it patiently lies dormant for extended time on the host to evade detection through logging. The trojan gathered data on the victims and made it possible for attackers to move laterally on the victims systems and install further exploitation tools\footnote{Cobalt strike Beacon was mentioned\cite{Mandiant}}. It is assumed that relatively few\footnote{According to SolarWinds CISO Tim Brown in \cite{SolarWindsCISO} Less than 100} high value targets were exploited further, the targets were government institutions defense and security companies, hereunder FireEye who discovered the breach.
+
+\section{Description Of The Attack} 
+The SolarWinds hack is a "supply chain" attack, this has a number of advantages for the attacker:
+
+\begin{itemize}
+	\item It utilizes the trust companies have in out-sourced resources (management have a tendency to see such things as "a risk that has been mitigated by transferring it to a subcontractor") 
+	\item The attack surface and reach is much larger for the same effort (a lot more can be hit with the same hack)
+	\item In this case, the target is an IT security software vendor, putting the attacker in a wolf in shepherds clothing situation. In hindsight security vendors are an obvious target
+\end{itemize} 
+
+The SolarWinds company was presumably hacked in September 2019\cite{TechTargetSolarwinds}, The attackers implanted a trojan malware to be known as "SUNBURST\footnote{Microsoft named it "Solorigate" \cite{MicrosoftSolarwinds}}" in the company's build pipeline for the Orion software in February 2020, prior to this the attackers even tested their malicious deployment pipeline with other pieces of code\cite{orangematterSunburst}. 
+\par
+FireEye (of course) shared their findings with SolarWinds who then managed the breach with legal assistance, CISA and CloudStrike\footnote{The handling of the breach has become a model for how to handle devastating breaches, SolarWinds CISO Tm Brown talks about it in \cite{CISA_sunburst}}   
+
+SolarWinds never found any malware in their source code, the malware was implanted into the build pipeline and thereby evaded code analysis. 
+
+\subsection{SUNBURST}
+The attackers transplanted the SUNBURST Backdoor malware into the SolarWinds.Orion.Core.BusinessLayer.dll\cite{Mandiant}. The dll was digitally signed by SolarWinds and distributed as updates to clients systems.
+
+\subsection{Malware analysis}     
+The SolarWinds.Orion.Core.BusinessLayer.dll has been decompiled and analyzed. FireEye did a thorough analysis in\cite{Mandiant} and CISA provided a deatiled analysis in \cite{CISA_sunburst} furthermore \cite{cybercdh} provided a walkthrough decompiling the code using dnSpy, which the following is inspired by.
+
+
+\subsubsection{Stealth}
+
+\subsubsection{Data Collection}
+
+\subsubsection{Exfiltration}
+
+\section{Conclusion}
+Something does not add up wrt. the presumed breach time and the features of the malware code, and the implementation in the build pipeline. The attackers would need to know the codebase with more than a decompilation would reveal and they would also need details on the solar winds build pipeline. This would either require a longer reconnaissance period or insider knowledge..  
+
+
+Description of the attack (What and how vulnerability was exploited? Was malware used?)
+
+% \begin{figure} % Single column figure
+% 	% \includegraphics[width=\linewidth]{SMB-transaction.png}
+% 	\caption{Request response, SMB protocol. Source: windows learning }
+% 	\label{fig:Figure1}
+% \end{figure}
+
+\subsection{Signatures/Attribution}
+
+Super patient
+
+No variable names etc.., they had "washed the code" send it through a de-compiler before..
+"SolarWinds Hackers\footnote{Microsoft again had their own name "Nobelium"}"
+
+
+\section{Impact/Legal Actions} 
+Impact and/or Legal Actions (Was the company subject to fines? How was the company affected?)
+
+\section{Remediation} 
+Remediation steps (What measures were put in place to prevent future breaches?)
+
+%----------------------------------------------------------------------------------------
+%	 REFERENCES
+%----------------------------------------------------------------------------------------
+
+\printbibliography % Output the bibliography
+
+%----------------------------------------------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------------
+%	 Appendices
+%----------------------------------------------------------------------------------------
+
+
+\clearpage
+\begin{appendices}
+\section{Appendix A}
+Test
+\end{appendices}
+
+\end{document}
