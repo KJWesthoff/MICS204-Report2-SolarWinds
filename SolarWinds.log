@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.5.11)  21 JUN 2024 14:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.5.11)  22 JUN 2024 15:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -532,31 +532,32 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 \@quotelevel=\count413
 \@quotereset=\count414
-LaTeX Font Info:    Trying to load font information for T1+pplx on input line 69.
+LaTeX Font Info:    Trying to load font information for T1+pplx on input line 70.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pplx.fd
 File: t1pplx.fd 2004/09/06 font definitions for T1/pplx.
-) (./SolarWinds.aux)
+)
+No file SolarWinds.aux.
 \openout1 = `SolarWinds.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count415
 \scratchdimen=\dimen183
@@ -610,18 +611,18 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \big@size=\dimen185
-LaTeX Info: Redefining \microtypecontext on input line 69.
-Package microtype Info: Applying patch `item' on input line 69.
-Package microtype Info: Applying patch `toc' on input line 69.
-Package microtype Info: Applying patch `eqnum' on input line 69.
-Package microtype Info: Applying patch `footnote' on input line 69.
+LaTeX Info: Redefining \microtypecontext on input line 70.
+Package microtype Info: Applying patch `item' on input line 70.
+Package microtype Info: Applying patch `toc' on input line 70.
+Package microtype Info: Applying patch `eqnum' on input line 70.
+Package microtype Info: Applying patch `footnote' on input line 70.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 69.
+LaTeX Info: Redefining \showhyphens on input line 70.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -641,8 +642,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'SolarWinds.bbl' found.
  (./SolarWinds.bbl)
-Package biblatex Info: Reference section=0 on input line 69.
-Package biblatex Info: Reference segment=0 on input line 69.
+Package biblatex Info: Reference section=0 on input line 70.
+Package biblatex Info: Reference segment=0 on input line 70.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -653,7 +654,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
 )
-Package hyperref Info: Link coloring ON on input line 69.
+Package hyperref Info: Link coloring ON on input line 70.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -663,30 +664,29 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count421
 )
-LaTeX Info: Redefining \ref on input line 69.
-LaTeX Info: Redefining \pageref on input line 69.
-LaTeX Info: Redefining \nameref on input line 69.
- (./SolarWinds.out) (./SolarWinds.out)
+LaTeX Info: Redefining \ref on input line 70.
+LaTeX Info: Redefining \pageref on input line 70.
+LaTeX Info: Redefining \nameref on input line 70.
 \@outlinefile=\write4
 \openout4 = `SolarWinds.out'.
 
-LaTeX Font Info:    Trying to load font information for OT1+pplx on input line 72.
+LaTeX Font Info:    Trying to load font information for OT1+pplx on input line 73.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pplx.fd
 File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
 )
-LaTeX Font Info:    Trying to load font information for OML+zplm on input line 72.
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 73.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 72.
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 73.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 72.
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 73.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 72.
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 73.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
@@ -694,21 +694,21 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zplm' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 86.
+LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 87.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pplx.fd
 File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 \T1/pplx/m/n/10 (+20) The at-tack-ers trans-planted the SUN-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 \T1/pplx/m/n/10 (+20) BURST Back-door mal-ware into the So-lar-
  []
 
 
-Underfull \hbox (badness 5908) in paragraph at lines 98--99
+Underfull \hbox (badness 5908) in paragraph at lines 99--100
 \T1/pplx/m/n/10 (+20) Winds.Orion.Core.BusinessLayer.dll[[][]3[][]]. The dll
  []
 
@@ -716,8 +716,30 @@ Underfull \hbox (badness 5908) in paragraph at lines 98--99
 
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 140.
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+
+LaTeX Warning: Reference `fig:RefreshInternal' on page 2 undefined on input line 109.
+
+
+LaTeX Warning: Reference `fig:Initialize' on page 2 undefined on input line 111.
+
+
+LaTeX Warning: Reference `fig:GetHash' on page 2 undefined on input line 111.
+
+
+LaTeX Warning: Reference `fig:Initialize' on page 2 undefined on input line 118.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--120
+[][][][]\T1/pplx/m/n/8 (+20) HKLM/SYSTEM/CurrentControlSet/services/"servicename
+ []
+
+[2]
+Underfull \hbox (badness 2042) in paragraph at lines 163--165
+[]\T1/pplx/m/n/10 (+20) Persistence ex-ceed-ing de-fen-sive log-ging cy-cles
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 188.
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -725,33 +747,117 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 1014) in paragraph at lines 141--141
-\T1/pplx/m/it/10 (+20) With SUN-BURST Back-door google\T1/pplx/m/n/10 (+20) . [][]$\T1/cmtt/m/n/10 https : / /
+Underfull \hbox (badness 1009) in paragraph at lines 189--189
+\T1/cmtt/m/n/10 solarwinds -[] supply -[] chain -[] compromises -[]
  []
 
-[2] [3
+
+Underfull \hbox (badness 1881) in paragraph at lines 189--189
+\T1/pplx/m/it/10 (+20) ings From Our In-ves-ti-ga-tion of SUN-BURST)\T1/pplx/m/n/10 (+20) .
+ []
+
+/home/kj/Documents/Courses/MICS/204 SW Security/Report2CyberBreach/Report/SolarWinds.tex:189: Missing $ inserted.
+<inserted text> 
+                $
+l.189 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/home/kj/Documents/Courses/MICS/204 SW Security/Report2CyberBreach/Report/SolarWinds.tex:189: Missing $ inserted.
+<inserted text> 
+                $
+l.189 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 
-] (./SolarWinds.aux)
-Package rerunfilecheck Info: File `SolarWinds.out' has not changed.
-(rerunfilecheck)             Checksum: 34E1E8A75767F93BF3F1E07692679DA0;1689.
+Underfull \hbox (badness 10000) in paragraph at lines 189--189
+[]\T1/pplx/m/n/10 (+20) ItayCoen. \T1/pplx/m/it/10 (+20) GitHub (SunBurst$[]\OML/zplm/m/it/10 ample[]ource\OT1/zplm/m/n/10 )$\T1/pplx/m/n/10 (+20) .
+ []
+
+
+Underfull \hbox (badness 7186) in paragraph at lines 189--189
+[][]$\T1/cmtt/m/n/10 https : / / github . com / ITAYC0HEN /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--189
+\T1/cmtt/m/n/10 SUNBURST -[] Cracked / blob / main /
+ []
+
+
+Underfull \hbox (badness 1577) in paragraph at lines 189--189
+\T1/cmtt/m/n/10 OrionImprovementBusinessLayer _ modified .
+ []
+
+[3]
+<Figures/RefreshInternal.png, id=118, 1210.5225pt x 606.265pt>
+File: Figures/RefreshInternal.png Graphic file (type png)
+<use Figures/RefreshInternal.png>
+Package pdftex.def Info: Figures/RefreshInternal.png  used on input line 206.
+(pdftex.def)             Requested size: 500.484pt x 250.66095pt.
+<Figures/GetHash.png, id=121, 621.32124pt x 326.21875pt>
+File: Figures/GetHash.png Graphic file (type png)
+<use Figures/GetHash.png>
+Package pdftex.def Info: Figures/GetHash.png  used on input line 212.
+(pdftex.def)             Requested size: 500.484pt x 262.77727pt.
+ [4
+
+
+] [5 <./Figures/RefreshInternal.png> <./Figures/GetHash.png>]
+<Figures/Initialize.png, id=136, 1650.165pt x 706.64pt>
+File: Figures/Initialize.png Graphic file (type png)
+<use Figures/Initialize.png>
+Package pdftex.def Info: Figures/Initialize.png  used on input line 221.
+(pdftex.def)             Requested size: 652.70622pt x 279.50252pt.
+ [6 <./Figures/Initialize.png>]
+<Figures/hashedProcessNames.png, id=144, 793.96625pt x 746.79pt>
+File: Figures/hashedProcessNames.png Graphic file (type png)
+<use Figures/hashedProcessNames.png>
+Package pdftex.def Info: Figures/hashedProcessNames.png  used on input line 229.
+(pdftex.def)             Requested size: 500.484pt x 470.75366pt.
+ [7 <./Figures/hashedProcessNames.png>] (./SolarWinds.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `SolarWinds.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `SolarWinds.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  755014CFFD1ADB56AAC2F1F857EF4ECD;1981.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                SolarWinds
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'SolarWinds.run.xml'.
 \openout1 = `SolarWinds.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21243 strings out of 478287
- 374654 string characters out of 5849289
- 1114650 words of memory out of 5000000
- 38824 multiletter control sequences out of 15000+600000
- 537010 words of font info for 301 fonts, out of 8000000 for 9000
+ 21329 strings out of 478287
+ 376270 string characters out of 5849289
+ 1113897 words of memory out of 5000000
+ 38850 multiletter control sequences out of 15000+600000
+ 540914 words of font info for 337 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,82p,1083b,1308s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on SolarWinds.pdf (3 pages, 111686 bytes).
+ 75i,11n,82p,1083b,1587s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on SolarWinds.pdf (7 pages, 511812 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 151 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
- 111209 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 190 PDF objects out of 1000 (max. 8388607)
+ 161 compressed objects within 2 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 111125 words of extra memory for PDF output out of 128383 (max. 10000000)
 

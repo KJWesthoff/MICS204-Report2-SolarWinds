@@ -137,6 +137,26 @@
       \field{note}{Accessed: 2024-06-21}
       \field{title}{{CISA} (MAR-10318845-1.v1 - SUNBURST)}
     \endentry
+    \entry{SolarWindsOrionCoreBusinessLayerdll}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=55d4c5113cdd1db971df752f7d4a4684}{%
+           family={ItayCoen},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{55d4c5113cdd1db971df752f7d4a4684}
+      \strng{fullhash}{55d4c5113cdd1db971df752f7d4a4684}
+      \strng{bibnamehash}{55d4c5113cdd1db971df752f7d4a4684}
+      \strng{authorbibnamehash}{55d4c5113cdd1db971df752f7d4a4684}
+      \strng{authornamehash}{55d4c5113cdd1db971df752f7d4a4684}
+      \strng{authorfullhash}{55d4c5113cdd1db971df752f7d4a4684}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/ITAYC0HEN/SUNBURST-Cracked/blob/main/OrionImprovementBusinessLayer_modified.cs}}
+      \field{note}{Accessed: 2024-06-21}
+      \field{title}{{GitHub} (SunBurst_Sample_Source)}
+    \endentry
     \entry{cybercdh}{misc}{}
       \name{author}{1}{}{%
         {{hash=d49d34433da073922ca751517e04ac5e}{%
@@ -156,6 +176,33 @@
       \field{howpublished}{\url{https://youtu.be/JoMwrkijTZ8?feature=shared}}
       \field{note}{Accessed: 2024-06-21}
       \field{title}{{Youtube} (SUNBURST SolarWinds Malware - Tools, Tactics and Methods to get you started with Reverse Engineering)}
+    \endentry
+    \entry{SECLawsuit}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=363b6229788c667b83b1dd5270fc79e6}{%
+           family={Securities},
+           familyi={S\bibinitperiod},
+           given={US},
+           giveni={U\bibinitperiod}}}%
+        {{hash=5f5c85d6e917cbd149cf4f13f290660b}{%
+           family={Commission},
+           familyi={C\bibinitperiod},
+           given={Exchange},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{59071fb4a9017c9f6fc202dd98c50474}
+      \strng{fullhash}{59071fb4a9017c9f6fc202dd98c50474}
+      \strng{bibnamehash}{59071fb4a9017c9f6fc202dd98c50474}
+      \strng{authorbibnamehash}{59071fb4a9017c9f6fc202dd98c50474}
+      \strng{authornamehash}{59071fb4a9017c9f6fc202dd98c50474}
+      \strng{authorfullhash}{59071fb4a9017c9f6fc202dd98c50474}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.sec.gov/news/press-release/2023-227}}
+      \field{note}{Accessed: 2024-06-22}
+      \field{title}{{SEC Press Release} (SEC Charges SolarWinds and Chief Information Security Officer with Fraud, Internal Control Failures)}
     \endentry
   \enddatalist
 \endrefsection
