@@ -76,117 +76,109 @@ MICS Course 204 Summer 2024
 %----------------------------------------------------------------------------------------
 
 \section{Summary Of The Breach}
-December 13, 2020 a vigilant security analyst at the security company FireEye (later Mandiant) reacted to an unauthorized phone registering on their network \cite{CNN_FireEye}. It was during the covid pandemic so a lot of employees were adding new 'work from home' equipment, but the analyst decided to investigate and determined that the company had been breached, someone unauthorized was logging in. After a thorough search through systems, the breach was isolated to origin in the company's 'SolarWinds Orion' network monitoring system. The SolarWinds Orion product was(is) a tool for monitoring corporate networks and endpoints \cite{SolarWindsOrion}, meaning it had high system privileges on windows networks. \par
-It turned out that the SolarWinds company had been hacked, and a trojan had been implanted with the Orion software. The trojan had been transplanted into SolarWinds software build pipeline (it was not present in codebase), and pushed to their customers with digitally signed updates. \par
-Sunburst is a sophisticated malware deeply integrated with its SolarWinds host, it has a small footprint\footnote{3500 lines of code} and hides in plain sight. Command and control functions communicate via the same ports and protocols as Orion thereby evading detection, another feature of the malware is that it patiently lies dormant for extended time on the host to evade detection through logging. The trojan gathered data on the victims and made it possible for attackers to move laterally on the victims systems and install further exploitation tools\footnote{Cobalt strike Beacon was mentioned\cite{Mandiant}}. It is assumed that relatively few\footnote{According to SolarWinds CISO Tim Brown in \cite{SolarWindsCISO} Less than 100} high value targets were exploited further, the targets were government institutions defense and security companies, hereunder FireEye who discovered the breach.
+December 13, 2020 a vigilant security analyst at the security company FireEye reacted to an unauthorized phone registering on their network \cite{CNN_FireEye}. It was during the covid pandemic so a lot of employees were adding new 'work from home' equipment, but the analyst decided to investigate and determined that the company had been breached, someone unauthorized was logging in. After a thorough search through systems, the breach was isolated to origin in the company's 'SolarWinds Orion' network monitoring system.\par The SolarWinds Orion product is a tool for monitoring corporate networks and endpoints \cite{SolarWindsOrion}, meaning it has high system privileges on windows networks. \par
+It turned out that the SolarWinds company had been hacked, and a trojan had been implanted with the Orion software. The trojan had been merged into SolarWinds software build pipeline (it was not present in codebase), and pushed to their customers with digitally signed updates. \par
+Sunburst is a sophisticated malware deeply integrated with its SolarWinds host, it has a small footprint\footnote{3500 lines of code} and hides in plain sight. Command and control functions communicate via the same ports and protocols as Orion thereby evading detection, another feature of the malware is that it patiently lies dormant for extended time on the host to evade detection through logging. The trojan gathered data on the victims and made it possible for attackers to move laterally on the victims systems and install further exploitation tools. It is assumed that relatively few\footnote{According to SolarWinds CISO Tim Brown in \cite{SolarWindsCISO} Less than 100} high value targets were exploited further, the targets were government institutions defense and security companies, hereunder FireEye who discovered the breach.
 
 \section{Description Of The Attack} 
 The SolarWinds hack is a "supply chain" attack, this has a number of advantages for the attacker:
 
 \begin{itemize}
-	\item It utilizes the trust companies have in out-sourced resources (management have a tendency to see such things as "a risk that has been mitigated by transferring it to a subcontractor") 
+	\item It utilizes the trust companies have in out-sourced resources 
 	\item The attack surface and reach is much larger for the same effort (a lot more can be hit with the same hack)
-	\item In this case, the target is an IT security software vendor, putting the attacker in a wolf in shepherds clothing situation. In hindsight security vendors are an obvious target
+	\item Hacking SolarWinds put the attacker in a "wolf in shepherds clothing" situation. In hindsight security vendors are an obvious target
 \end{itemize} 
 
-The SolarWinds company was presumably hacked in September 2019\cite{TechTargetSolarwinds}, The attackers implanted a trojan malware to be known as "SUNBURST\footnote{Microsoft named it "Solorigate" \cite{MicrosoftSolarwinds}}" in the company's build pipeline for the Orion software in February 2020, prior to this the attackers even tested their malicious deployment pipeline with other pieces of code\cite{orangematterSunburst}. 
+The SolarWinds company was presumably hacked in September 2019\cite{TechTargetSolarwinds}, The attackers implanted a trojan malware to be known as "SUNBURST\footnote{Microsoft named it "Solorigate" \cite{MicrosoftSolarwinds}}" in the company's build pipeline for the Orion software, prior to this the attackers even tested their malicious deployment pipeline with other pieces of code\cite{orangematterSunburst}. 
 \par
 FireEye (of course) shared their findings with SolarWinds who then managed the breach with legal assistance, CISA and CrowdStrike\footnote{The handling of the breach has become a model for how to handle devastating breaches, SolarWinds CISO Tm Brown talks about it in \cite{CISA_sunburst}} etc.   
 
 SolarWinds never found any malware in their source code, the malware was implanted into the build pipeline and thereby evaded code analysis. 
 
 \subsection{SUNBURST}
-The attackers transplanted the SUNBURST Backdoor malware into the SolarWinds.Orion.Core.BusinessLayer.dll\cite{Mandiant}. The dll was digitally signed by SolarWinds and distributed as updates to clients systems.
+The attackers transplanted the SUNBURST Backdoor malware into the SolarWinds.Orion.Core.BusinessLayer.dll\cite{Mandiant}. The dll was digitally signed by SolarWinds and distributed as updates to clients systems worldwide.
 
 \subsection{Malware analysis}     
-The SolarWinds.Orion.Core.BusinessLayer.dll has been decompiled (see \cite{SolarWindsOrionCoreBusinessLayerdll}) and analyzed. FireEye did a thorough analysis in\cite{Mandiant} and CISA provided a detailed analysis in \cite{CISA_sunburst} furthermore \cite{cybercdh} provided a walkthrough de-compiling the code using dnSpy, which the following is inspired by.
+The SolarWinds.Orion.Core.BusinessLayer.dll has been decompiled and analyzed\cite{SolarWindsOrionCoreBusinessLayerdll}. FireEye did a thorough analysis in\cite{Mandiant} and CISA provided a detailed analysis in \cite{CISA_sunburst} furthermore \cite{cybercdh} provided a walkthrough de-compiling the code using dnSpy, which the following is inspired by.
 
 
 \subsubsection{Stealth}
-The experienced analysts from CrowdStrike found nothing in the source code that indicated malware, no re-used code etc. (.NET c\# can be de-compiled with variable names intact). The code had been designed to blend into the host SolarWinds.Orion.Core.BusinessLayer.dll code. Selected de-compiled snippets from the code is shown in Appendix:
+The analysts from CrowdStrike found nothing in the decompiled source code that indicated malware, no re-used code etc. (.NET c\# can be de-compiled with variable names intact). The code had been designed to blend into the .dll code. Selected de-compiled snippets from the code is shown in Appendix:
 
 \begin{itemize}
-\item{Figure \ref{fig:RefreshInternal}, in line 11 a new thread is started, calling an Initialize function as a background process (line 13).} 
-\item{
-The Initialize function, see Figure \ref{fig:Initialize} has a bunch of nested if's, and does nothing until they are all true. The first if (line 5) gets the current process name, hashes it (using a custom function, see Figure \ref*{fig:GetHash}) and compares it to a hard coded hash. In general the code uses hashes to hide names for what it is looking for.}
-\item{The 2nd if is a timer, where the code waits a random time between 288 and 336 hours (12-14days) from installation. This is presumeably to hide from anti malware survallance}     
+\item{A new thread is started (see Figure \ref{fig:RefreshInternal} line 11) calling an 'Initialize' function as a background process (line 13).} 
+\item
+	The 'Initialize()' function (Figure \ref{fig:Initialize}) has a bunch of nested 'if's, and does nothing until they are all true. 
+	\begin{itemize}
+		\item The first 'if' (line 5) gets the current process name, hashes it (using a custom function, see Figure \ref{fig:GetHash} and compares it to a hard coded hash. In general the code uses hashes to hide names for what it is looking for.
+		\item{The 2.nd if is a timer, where the code waits a random time between 288 and 336 hours (12-14days) from installation. This is presumeably to hide from anti malware survallance}
+		\item Some more checks
+		\item  The last 'if' in the Initialize function (line24) is a call to a function named 'Update()'
 \end{itemize}
 
-Important feature: The code lays dormant on a system for at least 12 days and until conditions are right for it to execute successfully. 
+\end{itemize}
+
+
 
 \subsubsection{Recconaissance}
-The last 'if' in the Initialize function Figure \ref{fig:Initialize} line24 is a call to a function named "Update()"
-The update function checks if a list\footnote{The list of process names are lowercased, hashed and compared against a list of static hashes bundles with the code\cite{SolarWindsOrionCoreBusinessLayerdll} line 554 forwards.} of defensive processes are running (eg "carbonblack"). It will then get the process id's of these and try to disable these processes
-\footnote{HKLM/SYSTEM/CurrentControlSet/services/"servicename here"/Start registry entries set to value 4 (Again, discrete coding)}, leaving the target vulnerable for further exploitation. 
-\par
 
-Important feature: Obfuscation by hashing values and names to avoid detection by code analyses software, disabling defensive processes.
+The 'Update() function checks if a list\footnote{The list of process names are lowercased, hashed and compared against a list of static hashes bundles with the code\cite{SolarWindsOrionCoreBusinessLayerdll} line 554 forwards.} of defensive processes are running (AntiVirus, firewalls etc.). It will then get the process id's and try to disable these\footnote{HKLM/SYSTEM/CurrentControlSet/services/"servicename here"/Start registry entries set to value 4 (Again, discrete coding)}, leaving the target vulnerable for further exploitation. 
+
 
 \subsubsection{C2/Communication}
-With the target vulnerable, the SUNBURST malware starts to phone home with its findings. It uses a domain generation algorithm \cite{Mandiant} and Base64 encoded URL's hidden in plain sight. The malware needs domain names to contact it's Command and Control (C2) servers for data exfiltration. The C2 domain was based on the victims geographic location and a to the victim 'local' hostname chosen.  
+With the target vulnerable, the SUNBURST malware starts to phone home with its findings. It uses a domain generation algorithm \cite{Mandiant} and Base64 encoded URL's hidden in the code. The malware needs domain names to contact it's Command and Control (C2) servers for data exfiltration. The C2 hostnames are generated based on the victims geographic location. 
 
 \subsubsection{Exfiltration}
-With a C2 hostname and the SUNBURST malware exfiltrated target information to the Atackers C2 endpoint. The traffic was hidden and made to look like benign SolarWinds traffic. Steganography was used to hide a custom command and control protocol in XML messages also used by other processes and therefore would be allowed though the victims monitoring and firewalls. FireEye did a thorough writeup as the attack was happening\cite{Mandiant}, and showed that SUNBURST has the ability to gather information on the target, download and write files run tasks etc.    
+The traffic was hidden in XML messages also used by other SolarWinds processes. Steganography was used to hide a whole custom command and control protocol. FireEye did a thorough writeup as the attack was happening\cite{Mandiant}, and showed that SUNBURST has the ability to gather information on the target, download and write files, run tasks etc.    
 
 \subsubsection{Further Exploitation}
-The further exploited target were subjected to customized attacks using CobaltStrike\footnote{These used CobaltStrike BEACON as were named TEARDROP, RainDrop etc. FireEye and Microsoft\cite{MicrosoftSolarwinds}}, establishing persistence and privilege escalation on the victim. These were crafted specifically for each target based on the information gathered using SUNBURST.     
+The further exploited targets were subjected to customized attacks using CobaltStrike\footnote{These used CobaltStrike BEACON as were named TEARDROP, RainDrop etc. FireEye and Microsoft\cite{MicrosoftSolarwinds}}, establishing persistence and privilege escalation on the victim. These were crafted specifically for each target based on the information gathered using SUNBURST.     
+
+
 
 \subsection{Signatures/Attribution}
-No proof has been established as to who the SolarWinds hackers\footnote{Microsoft again had their own name "Nobelium"}" are.
-It is assumed to be a high resource "Nation State" actor the reasoning being:
+No proof has been established as to who the SolarWinds hackers\footnote{Microsoft again had their own name "Nobelium"} are.
+It is assumed to be a high resource "Nation State" actor, the reasoning being:
 \begin{itemize}
-	\item The relative few targets that were exploited further
-	\item \begin{itemize}
-		\item The exploited targets were security, government institutions  and defense.
-	\end{itemize}
-	\item Effort to conceal malware code and C2 communication
+	\item The attackers were selective, relatively few targets were exploited further and the exploited targets were security, government institutions and defense entities.
 	\item The malware's primary function is information gathering and reporting
+	\item Thorough obfuscation by hashing values and names to avoid detection by code analyses, effort to blend in (expensive)   
+	\item The code lays dormant on a system for at least 12 days and until conditions are right for it to execute successfully (more expensive to pull off, time is money)
+	\item Effort to hide C2 communication, indicating wanting to be persistent on the target
 	\item The code is not destructive
-	\item The code was erased from SolarWinds build pipeline before disclosure
 	\item No economical scope (it is not ransomware)
-	\item Stealthy and patient (more expensive to pull off, time is money)
+	\item The attackers were thorough in cleaning of log files after doing lateral movement and executing exploits 
+	\item SUNBURST was removed from SolarWinds build pipeline before it was detected (SolarWinds only found it on their systems after investigating a crashed server).
+	
 \end{itemize} 
 
 
-
 \section{Impact/Legal Actions} 
-In the Aftermath, SolarWinds and their CISO personally has been sued by the Securities and Exchange Commission\cite{SECLawsuit} for public statements about its cybersecurity practices and risks were at odds with its internal assessments prior to the attack.
+Some important lessons were learned by the SolarWinds hack:
+\begin{itemize}
+	\item Attention needed on supply chain attacks
+	\item Handling of large incidents amd preparation thereof is important
+	\item Collaboration and information sharing during incidents
+\end{itemize} 
 
-SolarWinds: 
-Got the world to pay attention to supply chain attacks. 
-Focus on how to handle large incidents.
-Collaboration and information sharing during incidents.
-Investment and focus on CyberSecurity in general
+Many saw the SolarWinds attack as something new that could happen to anyone. However, in the Aftermath (2023), SolarWinds and their CISO personally have been sued by the Securities and Exchange Commission\cite{SECLawsuit} for public statements about its cybersecurity practices and risks were at odds with its internal assessments prior to the attack. This is yet to be concluded.
 
-
-
-Persistence exceeding defensive logging cycles (90days) to evade code comparison.
-Supply Chain attacks, in "secondary pipelines" e.g. the recent attack on the Linux xz compression with malicious code sneaked into a testing module (CVE-2024-3094).
-
-
-Impact and/or Legal Actions (Was the company subject to fines? How was the company affected?)
-CISO lawsuit
-Disgruntled emplyees etc.
-'Beef' with Microsoft  dd
-etc
-
+Some new angles to security have been revealed (or adapted) from the attack:
+\begin{itemize}
+	\item Persistence exceeding defensive logging cycles (e.g. 90days) to evade code comparison should be considered.
+	\item Supply Chain attacks, in "secondary pipelines" e.g. the recent attack on the Linux xz compression with malicious code sneaked into a testing module (CVE-2024-3094\cite{NISTCVE20243094}) needs to be addressed
+\end{itemize}
 
 
 \section{Remediation} 
-Remediation steps (What measures were put in place to prevent future breaches?)
+FireEye, CrowdStrike and Microsoft etc. worked well together and were quick to issue firewall and SIEM rules to stop the attack, and it was possible to establish and communicate who had been exploited further. 
 
--- Chek for the C2 hostnames, malware need these and there is no easy way of doing it hidden for the malware
--- Do a check of the compiled code against the codebase to catch if anything wired has happened during build.
-
-\section{Conclusion}
-Something does not add up wrt. the presumed breach time and the features of the malware code, and the implementation in the build pipeline. The attackers would need to know the codebase with more than a de-compilation would reveal and they would also need details on the solar winds build pipeline. This would either require a longer reconnaissance period or insider knowledge..  
+I think a defense possibility against a spy/malware that need to communicate with C2 is that only way to 'phone home' is using hostnames which need to be embedded in the malware, a good defense will be to search for these. 
 
 %----------------------------------------------------------------------------------------
 %	 REFERENCES
 %----------------------------------------------------------------------------------------
-
 \printbibliography % Output the bibliography
-
 %----------------------------------------------------------------------------------------
 
 
@@ -201,6 +193,7 @@ Something does not add up wrt. the presumed breach time and the features of the 
 \onecolumn
 
 \section{Appendix}
+
 
 \begin{figure}[p] % Single column figure
 	\includegraphics[width=\linewidth]{Figures/RefreshInternal.png}
