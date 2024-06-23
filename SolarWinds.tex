@@ -157,7 +157,7 @@ It is assumed to be a high resource "Nation State" actor, the reasoning being:
 Some important lessons were learned by the SolarWinds hack:
 \begin{itemize}
 	\item Attention needed on supply chain attacks
-	\item Handling of large incidents amd preparation thereof is important
+	\item Handling of large incidents and preparation thereof is important
 	\item Collaboration and information sharing during incidents
 \end{itemize} 
 
@@ -173,7 +173,7 @@ Some new angles to security have been revealed (or adapted) from the attack:
 \section{Remediation} 
 FireEye, CrowdStrike and Microsoft etc. worked well together and were quick to issue firewall and SIEM rules to stop the attack, and it was possible to establish and communicate who had been exploited further. 
 
-I think a defense possibility against a spy/malware that need to communicate with C2 is that only way to 'phone home' is using hostnames which need to be embedded in the malware, a good defense will be to search for these. 
+I think a defense possibility against a spy/malware that needs to communicate with C2 is that the only way to 'phone home' is using hostnames or ip's which need to be embedded in the malware, a good defense will be to search for these. 
 
 %----------------------------------------------------------------------------------------
 %	 REFERENCES
@@ -188,21 +188,20 @@ I think a defense possibility against a spy/malware that need to communicate wit
 %----------------------------------------------------------------------------------------
 
 
-\clearpage
 \begin{appendices}
 \onecolumn
 
 \section{Appendix}
 
 
-\begin{figure}[p] % Single column figure
+\begin{figure}[ht] % Single column figure
 	\includegraphics[width=\linewidth]{Figures/RefreshInternal.png}
 	\caption{SolarWinds.Orion.Core.BusinessLayer.RefreshInternal() Source:\cite{SolarWindsOrionCoreBusinessLayerdll}}
 	\label{fig:RefreshInternal}
 \end{figure}
 
-\begin{figure}[p] % Single column figure
-	\includegraphics[width=\linewidth]{Figures/GetHash.png}
+\begin{figure}[h] % Single column figure
+	\includegraphics[width=0.5\linewidth]{Figures/GetHash.png}
    \caption{SolarWinds.Orion.Core.BusinessLayer.RefreshInternal() Source:\cite{SolarWindsOrionCoreBusinessLayerdll}}
 	\label{fig:GetHash}
 \end{figure}

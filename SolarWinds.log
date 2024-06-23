@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.5.11)  22 JUN 2024 17:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.5.11)  22 JUN 2024 18:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -721,8 +721,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--125
  []
 
 [2]
+Underfull \hbox (badness 1082) in paragraph at lines 160--161
+[]\T1/pplx/m/n/10 (+20) Handling of large in-ci-dents and prepa-ra-tion
+ []
+
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 181.
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -765,29 +769,28 @@ Underfull \hbox (badness 1577) in paragraph at lines 183--183
 <Figures/RefreshInternal.png, id=173, 1210.5225pt x 606.265pt>
 File: Figures/RefreshInternal.png Graphic file (type png)
 <use Figures/RefreshInternal.png>
-Package pdftex.def Info: Figures/RefreshInternal.png  used on input line 199.
+Package pdftex.def Info: Figures/RefreshInternal.png  used on input line 198.
 (pdftex.def)             Requested size: 500.484pt x 250.66095pt.
 <Figures/GetHash.png, id=176, 621.32124pt x 326.21875pt>
 File: Figures/GetHash.png Graphic file (type png)
 <use Figures/GetHash.png>
-Package pdftex.def Info: Figures/GetHash.png  used on input line 205.
-(pdftex.def)             Requested size: 500.484pt x 262.77727pt.
+Package pdftex.def Info: Figures/GetHash.png  used on input line 204.
+(pdftex.def)             Requested size: 250.24199pt x 131.38614pt.
  [5
 
-
-] [6 <./Figures/RefreshInternal.png> <./Figures/GetHash.png>]
-<Figures/Initialize.png, id=187, 1650.165pt x 706.64pt>
+ <./Figures/RefreshInternal.png> <./Figures/GetHash.png>]
+<Figures/Initialize.png, id=183, 1650.165pt x 706.64pt>
 File: Figures/Initialize.png Graphic file (type png)
 <use Figures/Initialize.png>
-Package pdftex.def Info: Figures/Initialize.png  used on input line 214.
+Package pdftex.def Info: Figures/Initialize.png  used on input line 213.
 (pdftex.def)             Requested size: 652.70622pt x 279.50252pt.
- [7 <./Figures/Initialize.png>]
-<Figures/hashedProcessNames.png, id=195, 793.96625pt x 746.79pt>
+ [6 <./Figures/Initialize.png>]
+<Figures/hashedProcessNames.png, id=190, 793.96625pt x 746.79pt>
 File: Figures/hashedProcessNames.png Graphic file (type png)
 <use Figures/hashedProcessNames.png>
-Package pdftex.def Info: Figures/hashedProcessNames.png  used on input line 222.
+Package pdftex.def Info: Figures/hashedProcessNames.png  used on input line 221.
 (pdftex.def)             Requested size: 500.484pt x 470.75366pt.
- [8 <./Figures/hashedProcessNames.png>] (./SolarWinds.aux)
+ [7 <./Figures/hashedProcessNames.png>] (./SolarWinds.aux)
 Package rerunfilecheck Info: File `SolarWinds.out' has not changed.
 (rerunfilecheck)             Checksum: 4F41623C362D7EBB3124AC43780F0D23;1885.
 Package logreq Info: Writing requests to 'SolarWinds.run.xml'.
@@ -795,18 +798,18 @@ Package logreq Info: Writing requests to 'SolarWinds.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21342 strings out of 478287
- 376648 string characters out of 5849289
+ 21349 strings out of 478287
+ 376708 string characters out of 5849289
  1114366 words of memory out of 5000000
  38868 multiletter control sequences out of 15000+600000
- 538677 words of font info for 328 fonts, out of 8000000 for 9000
+ 539110 words of font info for 334 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,82p,1083b,1581s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,11n,82p,1083b,1579s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on SolarWinds.pdf (8 pages, 505470 bytes).
+Output written on SolarWinds.pdf (7 pages, 504851 bytes).
 PDF statistics:
- 238 PDF objects out of 1000 (max. 8388607)
- 209 compressed objects within 3 object streams
- 47 named destinations out of 1000 (max. 500000)
+ 234 PDF objects out of 1000 (max. 8388607)
+ 206 compressed objects within 3 object streams
+ 46 named destinations out of 1000 (max. 500000)
  111237 words of extra memory for PDF output out of 128383 (max. 10000000)
 
