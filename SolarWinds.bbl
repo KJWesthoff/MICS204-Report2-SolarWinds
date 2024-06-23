@@ -113,6 +113,14 @@
       \field{note}{Accessed: 2024-06-21}
       \field{title}{{cybercdh Youtube} (SUNBURST SolarWinds Malware - Tools, Tactics and Methods to get you started with Reverse Engineering)}
     \endentry
+    \entry{FireEyeGithub}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/mandiant/sunburst_countermeasures/tree/main}}
+      \field{note}{Accessed: 2024-06-22}
+      \field{title}{{FireEye/Mandiant} (FireEye Mandiant SunBurst Countermeasures)}
+    \endentry
     \entry{SECLawsuit}{misc}{}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -122,8 +130,8 @@
       \field{title}{{US Securities and Exchange Commission Press Release} (SEC Charges SolarWinds and Chief Information Security Officer with Fraud, Internal Control Failures)}
     \endentry
     \entry{NISTCVE20243094}{misc}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://nvd.nist.gov/vuln/detail/CVE-2024-3094}}
       \field{note}{Accessed: 2024-06-22}
